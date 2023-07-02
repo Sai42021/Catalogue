@@ -20,7 +20,7 @@ header h1{
     padding-left:150px;
     padding-right:150px;
   }
-  /*Nav bar END*/
+/*Nav bar END*/
 
 /* Models section Begin*/
 .models-section .card-img-top {
@@ -32,7 +32,7 @@ header h1{
 
 /* Featured prodcuts section */
 .featured-products {
-    padding-top: 5%;
+    padding-top: 8%;
 }
 
 .featured-products h2{
@@ -64,6 +64,22 @@ header h1{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #FFF;
+    font-size: large;
+    font-weight: 700;
 }
 
+.featured-products .btn-primary{
+    background-color: #1E1E1E !important;
+    border: 5px solid #1E1E1E !important;
+    border-radius: 0;
+
+    transition: all 0.3s;
+}
+
+.featured-products .btn-primary:hover {
+    transform: translateY(-10px);
+    background-color: #FFF !important;
+    color: #1E1E1E;
+}
 /* Featured prodcuts section END*/
