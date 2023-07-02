@@ -31,6 +31,10 @@ header h1{
 /* Models section END*/
 
 /* Featured prodcuts section */
+.featured-products {
+    padding-top: 5%;
+}
+
 .featured-products h2{
     font-weight: 700px;
     color: #000;
