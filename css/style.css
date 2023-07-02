@@ -13,6 +13,14 @@ header h1{
     font-size: 64px;
     font-weight: 800;
 }
+  
+header h1  a:link, header h1  a:visited, 
+header h1  a:hover, header h1  a:active {
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+  }
+
 /* Banner End*/
 
 /*Nav bar Begin*/
