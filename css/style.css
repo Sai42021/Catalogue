@@ -1,7 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-*body{
-    font-family: Lato;
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+body h2 {
+    font-weight: 700px;
+    color: #000;
+    font-size: 36px;
 }
 
 /* Banner Begin*/
@@ -12,6 +19,8 @@ header h1{
     font-family: 'Bad Script';
     font-size: 64px;
     font-weight: 800;
+
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
   
 header h1  a:link, header h1  a:visited, 
@@ -36,17 +45,15 @@ header h1  a:hover, header h1  a:active {
     height: 380px;
     object-fit: cover;
 }
+
+.models-section {
+    padding-top: 5%;
+}
 /* Models section END*/
 
 /* Featured prodcuts section */
 .featured-products {
     padding-top: 8%;
-}
-
-.featured-products h2{
-    font-weight: 700px;
-    color: #000;
-    font-size: 36px;
 }
 
 .featured-products p{
@@ -91,3 +98,57 @@ header h1  a:hover, header h1  a:active {
     color: #1E1E1E;
 }
 /* Featured prodcuts section END*/
+
+/* contact form begin */
+.contact-form {
+    padding-top: 5%;
+    display: flex; /* Add this line */
+    justify-content: flex-start; /* Add this line */
+  }
+  
+  .contact-form input[type="text"],
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  .contact-form input[type="submit"] {
+    background-color: grey;
+    color: white;
+    font-size: large;
+    font-weight: 700;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 4px;
+
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: darkgray;
+    transform: translateY(-10px);
+  }
+  
+  .contact-form .container {
+    border-radius: 5px;
+    padding: 20px;
+    align-items: start;
+    margin-left: 0; /* Add this line */
+    margin-right: auto; /* Add this line */
+  }
+
+@media screen and (min-width: 992px) { /* to add padding on larger screens*/
+    .contact-form {
+      padding-left: 70px;
+    }
+  }
+  /* contact form END */
+  
