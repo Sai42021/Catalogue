@@ -206,7 +206,14 @@
                 <div class="row">
                   <div class="col-md">
                     <span
-                      ><a href="#" class="btn btn-primary">Order Now</a></span
+                      ><button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#order-form"
+                      >
+                        Order Now
+                      </button></span
                     >
                   </div>
                 </div>
@@ -233,7 +240,14 @@
                 <div class="row">
                   <div class="col-md">
                     <span
-                      ><a href="#" class="btn btn-primary">Order Now</a></span
+                      ><button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#order-form"
+                      >
+                        Order Now
+                      </button></span
                     >
                   </div>
                 </div>
@@ -260,7 +274,14 @@
                 <div class="row">
                   <div class="col-md">
                     <span
-                      ><a href="#" class="btn btn-primary">Order Now</a></span
+                      ><button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#order-form"
+                      >
+                        Order Now
+                      </button></span
                     >
                   </div>
                 </div>
@@ -287,7 +308,14 @@
                 <div class="row">
                   <div class="col-md">
                     <span
-                      ><a href="#" class="btn btn-primary">Order Now</a></span
+                      ><button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#order-form"
+                      >
+                        Order Now
+                      </button></span
                     >
                   </div>
                 </div>
@@ -394,11 +422,139 @@
     </footer>
     <!-- Footer END-->
 
+    <!-- Modal Begin -->
+    <div
+      class="modal fade"
+      id="order-form"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="order-formLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="order-formLabel">Order Form</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">
+              Fill out this form to place your order. We will get back to you.
+            </p>
+            <form
+              action="https://sheetdb.io/api/v1/4oexzmvyimadm"
+              method="POST"
+              id="sheetdb-form"
+            >
+              <div class="mb-3">
+                <label for="fullName" class="col-form-label">
+                  Full name:
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  name="data[Full-Name]"
+                  placeholder="e.g Dave Lamb"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="cell-phone-number" class="col-form-label">
+                  Cell phone number:
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cell-phone-number"
+                  name="data[Cell-Phone-No]"
+                  placeholder="e.g +264 81 536 7343"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="location2" class="col-form-label">
+                  Location:
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="location2"
+                  name="data[Location]"
+                  placeholder="e.g Khomasdal"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="item-ordered" class="col-form-label">
+                  Item ordered:
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="item-ordered"
+                  name="data[Item-ordered]"
+                  placeholder="e.g Bowler Hat"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="quantity-of-item" class="col-form-label">
+                  Quantity of Item:
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="quantity-of-item"
+                  name="data[Quantity-of-Item]"
+                  placeholder="e.g 3"
+                  required
+                />
+              </div>
+
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">
+                  Confirm Order
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal END -->
+
     <!-- JS -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      var form = document.getElementById("sheetdb-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(form.action, {
+          method: "POST",
+          body: new FormData(document.getElementById("sheetdb-form")),
+        })
+          .then((response) => response.json())
+          .then((html) => {
+            window.open("Order-message.html", "_blank");
+          });
+      });
+    </script>
   </body>
 </html>

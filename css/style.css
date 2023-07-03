@@ -237,4 +237,38 @@ footer h3  a:hover, footer h3 a:active {
   background-color: #FFF !important;
   color: #1E1E1E;
 }
-/* products body Begin */
+/* products body END */
+
+/* Order form Begin*/
+.modal-footer .btn{
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: large;
+  font-weight: 700;
+}
+
+.modal-footer .btn{
+  background-color: #1E1E1E !important;
+  border: 5px solid #1E1E1E !important;
+  border-radius: 0;
+
+  transition: all 0.3s;
+}
+
+.modal-footer .btn:hover {
+  transform: translateY(-10px);
+  background-color: #FFF !important;
+  color: #1E1E1E;
+}
+/* Order form END*/
+
+/* Order message Begin */
+.order-successful-message h1 {
+  font-weight: 800; 
+  font-family: 'Lato', sans-serif;
+}
+/* Order message END */
