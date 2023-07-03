@@ -192,3 +192,49 @@ footer h3  a:hover, footer h3 a:active {
 }
 
 /* features page END*/
+
+/* products body Begin */
+.products-body h1 {
+  padding-bottom: 5%;
+}
+
+.products-body .row {
+  padding-bottom: 5%;
+}
+
+.products-body .card-img-top {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+}
+
+.products-body .card {
+  padding-top: 2%;
+  border: none;
+}
+
+.products-body .btn{
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;
+  font-size: large;
+  font-weight: 700;
+}
+
+.products-body .btn-primary{
+  background-color: #1E1E1E !important;
+  border: 5px solid #1E1E1E !important;
+  border-radius: 0;
+
+  transition: all 0.3s;
+}
+
+.products-body .btn-primary:hover {
+  transform: translateY(-10px);
+  background-color: #FFF !important;
+  color: #1E1E1E;
+}
+/* products body Begin */
